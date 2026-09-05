@@ -319,3 +319,112 @@ main hr {
   border-color: #d1d5db;
   transform: translateY(-2px);
 }
+
+
+
+/* light and dark mode */
+:root {
+    --bg-color: #080024;
+    --text-color: white;
+    --heading-color: #9870ff;
+    --subheading-color: #087d4d;
+    --hr-color: #9b8cff;
+    
+}
+
+body.light-mode {
+    --bg-color: #c4b0b0;
+    --text-color: #222222;
+    --heading-color: #5b35b5;
+    --subheading-color: #087d4d;
+    --hr-color: #7658c9;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2 {
+    color: var(--heading-color);
+}
+
+h3 {
+    color: var(--subheading-color);
+}
+
+hr {
+    border-color: var(--hr-color);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+#theme-toggle {
+    background: transparent;
+    border: 2px solid var(--heading-color);
+    color: var(--text-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: var(--heading-color);
+    transform: scale(1.1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --bg-color: #080024;
+    --text-color: white;
+    --heading-color: #9870ff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.light-mode {
+    --bg-color: #f5f5f5;
+    --text-color: #222222;
+    --heading-color: #5b35b5;
+}
+
+body.light-mode h1,
+body.light-mode h2 {
+    color: var(--heading-color);
+}
+
+#theme-toggle {
+    background: transparent;
+    border: 2px solid #9870ff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+}
